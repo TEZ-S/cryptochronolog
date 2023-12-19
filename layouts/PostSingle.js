@@ -7,10 +7,11 @@ import shortcodes from "@shortcodes/all";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import Link from "next/link";
+import YouTube from "react-youtube";
 
 const PostSingle = ({ post, posts, authors, slug }) => {
   const { frontmatter, content, mdxContent } = post;
-  let { description, title, date, image, categories, tags } = frontmatter;
+  let { description, title, date, video, categories, tags } = frontmatter;
   description = description ? description : content.slice(0, 120);
   const similarPosts = similerItems(post, posts, slug);
 
@@ -63,14 +64,15 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                 </ul>
               </li>
             </ul>
-            {image && (
-              <Image
-                src={image}
-                height={500}
-                width={1000}
-                alt={title}
-                className="rounded-lg"
-              />
+            {video && (
+              <YouTube className="rounded-lg" videoId={video}  alt={post.frontmatter.title}
+                       opts={{
+                         height: '500',
+                         width:  '1000',
+                       }}
+              >
+
+              </YouTube>
             )}
             <div className="content mb-16 text-left">
               <MDXRemote {...mdxContent} components={shortcodes} />

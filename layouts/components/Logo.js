@@ -21,7 +21,7 @@ const Logo = ({ src }) => {
           }}
         />
       ) : logo_text ? (
-        logo_text
+        <h3>{logo_text}</h3>
       ) : (
         title
       )}

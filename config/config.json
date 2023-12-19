@@ -1,12 +1,12 @@
 {
   "site": {
-    "title": "Bookworm Next | Personal Blog Theme",
+    "title": "CryptoChronolog",
     "base_url": "/",
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "logo": "",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "Bookworm Light"
+    "logo_text": "CryptoChronolog"
   },
 
   "settings": {
@@ -18,12 +18,12 @@
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2022 a theme by [themefisher](https://themefisher.com)"
+    "copyright": "CryptoChronolog © 2023"
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "Next Boilerplate"
+    "meta_author": "CryptoChronolog",
+    "meta_image": "/images/crypto-chronolog.png",
+    "meta_description": "\"CryptoChronolog\" offers quick and concise crypto news updates. Stay informed on the go with our fast-paced coverage of the latest trends, market shifts, and blockchain technology insights. Perfect for busy enthusiasts seeking reliable crypto news in a flash."
   }
 }

@@ -3,6 +3,7 @@ import dateFormat from "@lib/utils/dateFormat";
 import { humanize, slugify } from "@lib/utils/textConverter";
 import Image from "next/image";
 import Link from "next/link";
+import YouTube from 'react-youtube';
 
 const Posts = ({ posts, authors, className }) => {
   const { summary_length } = config.settings;
@@ -13,15 +14,16 @@ const Posts = ({ posts, authors, className }) => {
           key={`key-${i}`}
           className={i === 0 ? "col-12" : "col-12 sm:col-6"}
         >
-          {post.frontmatter.image && (
-            <Image
-              className="rounded-lg"
-              src={post.frontmatter.image}
-              alt={post.frontmatter.title}
-              width={i === 0 ? "925" : "445"}
-              height={i === 0 ? "475" : "230"}
-              priority={i === 0 ? true : false}
-            />
+          {post.frontmatter.video && (
+            <YouTube className="rounded-lg" videoId={post.frontmatter.video}  alt={post.frontmatter.title}
+                     opts={{
+                       height: (i === 0 ? "475" : "230"),
+                       width:  (i === 0 ? "925" : "445"),
+                     }}
+                     >
+
+            </YouTube>
+
           )}
           <ul className="mt-4 mb-4 flex flex-wrap items-center space-x-3 text-text">
             <li>
