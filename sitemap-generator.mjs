@@ -21,9 +21,9 @@ import { globby } from "globby";
       .replace(".md", "");
 
     return `<url>
-      <loc>http://www.example.com${path}</loc>
+      <loc>https://www.cryptochronolog.site/${path}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>daily</changefreq>
     </url>`;
   }).join("");
 
