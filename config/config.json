@@ -10,7 +10,7 @@
   },
 
   "settings": {
-    "pagination": 3,
+    "pagination": 7,
     "summary_length": 200,
     "blog_folder": "posts"
   },
@@ -23,6 +23,7 @@
 
   "metadata": {
     "meta_author": "CryptoChronolog",
+    "meta_kw": ["Crypto", "#CryptoInvestment", "Bitcoin", "News", "Solana", "XRP", "ETH", "ADA"],
     "meta_image": "/images/crypto-chronolog.png",
     "meta_description": "\"CryptoChronolog\" offers quick and concise crypto news updates. Stay informed on the go with our fast-paced coverage of the latest trends, market shifts, and blockchain technology insights. Perfect for busy enthusiasts seeking reliable crypto news in a flash."
   }

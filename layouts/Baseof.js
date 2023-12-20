@@ -9,12 +9,13 @@ const Base = ({
   title,
   meta_title,
   description,
+  tags,
   image,
   noindex,
   canonical,
   children,
 }) => {
-  const { meta_image, meta_author, meta_description } = config.metadata;
+  const { meta_image, meta_author, meta_description, meta_kw } = config.metadata;
   const { base_url } = config.site;
   const router = useRouter();
 
@@ -38,6 +39,11 @@ const Base = ({
         <meta
           name="description"
           content={plainify(description ? description : meta_description)}
+        />
+        {/* meta-description */}
+        <meta
+          name="keywords"
+          content={plainify(tags ? tags.toString().replace('/#/g','') : meta_kw.toString().replace('/#/g',''))}
         />
 
         {/* author from config.json */}

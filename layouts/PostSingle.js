@@ -11,7 +11,7 @@ import YouTube from "react-youtube";
 
 const PostSingle = ({ post, posts, authors, slug }) => {
   const { frontmatter, content, mdxContent } = post;
-  let { description, title, date, video, categories, tags } = frontmatter;
+  let { description, title, date, video,image, categories, tags } = frontmatter;
   description = description ? description : content.slice(0, 120);
   const similarPosts = similerItems(post, posts, slug);
 
@@ -68,11 +68,19 @@ const PostSingle = ({ post, posts, authors, slug }) => {
               <YouTube className="rounded-lg" videoId={video}  alt={post.frontmatter.title}
                        opts={{
                          height: '500',
-                         width:  '1000',
+                         width:  '100%',
                        }}
               >
-
               </YouTube>
+            )}
+            {image && (
+              <Image
+                src={image}
+                height={500}
+                width={1000}
+                alt={title}
+                className="rounded-lg"
+              />
             )}
             <div className="content mb-16 text-left">
               <MDXRemote {...mdxContent} components={shortcodes} />
