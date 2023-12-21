@@ -5,34 +5,30 @@ import {
   IoLogoPinterest,
   IoLogoTwitter,
 } from "react-icons/io5";
+import {FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton} from "next-share";
 
-const Share = ({ title, description, slug, className }) => {
+const Share = ({ title, tags, slug, className }) => {
   // destructuring items from config object
   const { base_url } = config.site;
 
   return (
     <ul className={`${className}`}>
       <li className="inline-block">
-        <a
-          aria-label="facebook share button"
-          href={`https://facebook.com/sharer/sharer.php?u=${base_url}/${slug}`}
-          target="_blank"
-          rel="noreferrer noopener"
-          button="true"
+        <FacebookShareButton
+          url={`${base_url}/${slug}`}
+          quote={title}
+          hashtag={tags}
         >
-          <IoLogoFacebook />
-        </a>
+          <FacebookIcon size={32} round />
+        </FacebookShareButton>
       </li>
       <li className="inline-block">
-        <a
-          aria-label="twitter share button"
-          href={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${base_url}/${slug}`}
-          target="_blank"
-          rel="noreferrer noopener"
-          button="true"
+        <TwitterShareButton
+          url={`${base_url}/${slug}`}
+          title={title}
         >
-          <IoLogoTwitter />
-        </a>
+          <TwitterIcon size={32} round />
+        </TwitterShareButton>
       </li>
     </ul>
   );

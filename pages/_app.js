@@ -50,6 +50,9 @@ const App = ({ Component, pageProps }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
+        <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8620658825508310"
+                crossOrigin="anonymous"></script>
       </Head>
       <Component {...pageProps} />
       <Analytics />

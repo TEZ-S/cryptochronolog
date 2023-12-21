@@ -98,11 +98,13 @@ const PostSingle = ({ post, posts, authors, slug }) => {
                   </li>
                 ))}
               </ul>
+              <hr/>
               <Share
                 className="social-share mb-4"
                 title={title}
                 description={description}
                 slug={slug}
+                tags={tags}
               />
             </div>
           </article>
