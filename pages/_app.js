@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import TagManager from "react-gtm-module";
 import "styles/style.scss";
+import {Analytics} from "@vercel/analytics/react";
 
 const App = ({ Component, pageProps }) => {
   // import google font css
@@ -51,6 +52,8 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <Component {...pageProps} />
+      <Analytics />
+
     </JsonContext>
   );
 };

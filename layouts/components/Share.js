@@ -34,27 +34,6 @@ const Share = ({ title, description, slug, className }) => {
           <IoLogoTwitter />
         </a>
       </li>
-      <li className="inline-block">
-        <a
-          aria-label="linkedin share button"
-          href={`https://www.linkedin.com/shareArticle?mini=true&url=${base_url}/${slug}&title=${title}&summary=${description}&source=${base_url}`}
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          <IoLogoLinkedin />
-        </a>
-      </li>
-      <li className="inline-block">
-        <a
-          aria-label="pinterest share button"
-          href={`https://pinterest.com/pin/create/button/?url=${base_url}/${slug}&media=&description=${description}`}
-          target="_blank"
-          rel="noreferrer noopener"
-          button="true"
-        >
-          <IoLogoPinterest />
-        </a>
-      </li>
     </ul>
   );
 };
