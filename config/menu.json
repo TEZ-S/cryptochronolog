@@ -1,6 +1,13 @@
 {
   "main": [
-
+    {
+      "name": "Categories",
+      "url": "/categories"
+    },
+    {
+      "name": "Tags",
+      "url": "/tags"
+    }
   ],
   "footer": [
 
