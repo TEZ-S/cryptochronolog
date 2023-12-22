@@ -13,7 +13,7 @@ const Categories = ({ categories }) => {
           {markdownify("Categories", "h1", "h2 mb-16")}
           <ul className="space-x-4">
             {categories.map((category, i) => (
-              <li key={`category-${i}`} className="inline-block">
+              <li key={`category-${i}`} className="inline-block mb-6">
                 <Link
                   href={`/categories/${category}`}
                   className="rounded-lg bg-theme-light px-4 py-2 text-dark transition hover:bg-primary hover:text-white"
