@@ -22,7 +22,7 @@ import { globby } from "globby";
       .replace(".md", "");
 
     return `<url>
-      <loc>https://www.cryptochronolog.site/${path}</loc>
+      <loc>https://www.cryptochronolog.site/${path.replaceAll('content/', '')}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>daily</changefreq>
     </url>`;
