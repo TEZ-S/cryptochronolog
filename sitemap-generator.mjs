@@ -9,6 +9,7 @@ import { globby } from "globby";
     "content/posts/*.md",
     "content/authors/*.md",
     "!pages/_*.js",
+    "!pages/[regular].js",
     "!pages/api"
   ]);
 
@@ -28,7 +29,7 @@ import { globby } from "globby";
   }).join("");
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urlSet}</urlset>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urlSet.replaceAll('//', '/')}</urlset>
   `;
 
   writeFileSync("public/sitemap.xml", sitemap);
